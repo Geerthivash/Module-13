@@ -32,13 +32,31 @@ Consider the names of the tower pegs as A, B, C. Get the number of disks value f
 ### PROGRAM  
 
 ```
+# Reg.No: 212223060067
+# Name: GEERTHIVASH J D
+
+def TowerOfHanoi(n , source, destination, auxiliary):
+	
+	if(n>0):
+	    TowerOfHanoi(n-1, source, auxiliary, destination)
+	    print ("Move disk from",source,"to",destination)
+	    TowerOfHanoi(n-1, auxiliary, destination, source)
+
+n=int(input())		
+print("No. of disks =",n)
+
+
+
+
 
 
 ```
 
 ### OUTPUT
 
+<img width="788" height="798" alt="image" src="https://github.com/user-attachments/assets/a2c4b727-7d40-4429-b8d1-2a1d64b72be6" />
 
 
 ### RESULT
 
+The program displays all the steps to move the given number of disks from peg A to peg C following the rules of the Tower of Hanoi puzzle using a recursive approach.
